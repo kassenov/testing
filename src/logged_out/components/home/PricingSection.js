@@ -6,7 +6,8 @@ import {
   Typography,
   isWidthUp,
   withWidth,
-  withStyles
+  withStyles,
+  Link
 } from "@material-ui/core";
 import PriceCard from "./PriceCard";
 import calculateSpacing from "./calculateSpacing";
@@ -46,6 +47,9 @@ const styles = theme => ({
 });
 
 function PricingSection(props) {
+
+  const [open, setOpen] = React.useState(false)
+
   const { width, classes } = props;
   return (
     <div className="lg-p-top" style={{ backgroundColor: "#FFFFFF" }}>
@@ -108,6 +112,7 @@ function PricingSection(props) {
             lg={3}
             data-aos="zoom-in-up"
             data-aos-delay={isWidthUp("md", width) ? "400" : "0"}
+            onClick={() => setOpen(true)}
           >
             <PriceCard
               title="Business"
@@ -120,7 +125,7 @@ function PricingSection(props) {
               features={["Feature 1", "Feature 2", "Feature 3"]}
             />
           </Grid>
-          <Grid
+          {open ? <Grid
             item
             className={classes.cardWrapper}
             xs={12}
@@ -129,6 +134,7 @@ function PricingSection(props) {
             data-aos="zoom-in-up"
             data-aos-delay={isWidthUp("md", width) ? "600" : "200"}
           >
+            <Link href="#/blog/post/post-1">Test</Link>
             <PriceCard
               title="Tycoon"
               pricing={
@@ -139,7 +145,7 @@ function PricingSection(props) {
               }
               features={["Feature 1", "Feature 2", "Feature 3"]}
             />
-          </Grid>
+          </Grid> : <></>}
         </Grid>
       </div>
     </div>
