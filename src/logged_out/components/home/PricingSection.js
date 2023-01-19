@@ -55,6 +55,7 @@ function PricingSection(props) {
     <div className="lg-p-top" style={{ backgroundColor: "#FFFFFF" }}>
       <Typography variant="h3" align="center" className="lg-mg-bottom">
         Pricing
+        <Link href="#/blog/post/post-1">Test</Link>
       </Typography>
       <div className={classNames("container-fluid", classes.containerFix)}>
         <Grid
