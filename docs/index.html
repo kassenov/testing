@@ -16,14 +16,25 @@
     <script src="https://unpkg.com/animejs@3.0.1/lib/anime.min.js"></script>
     <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
     <script>
+        // setTimeout(() => {
+        //     const parent = document.querySelector('.hero-cta')
+        //     const button = document.createElement('A')
+        //     button.setAttribute('class', 'button button-primary')
+        //     button.setAttribute('href', "https://kassenov.github.io/testing/2")
+        //     button.innerText = 'Pre order now'
+        //     parent.appendChild(button)
+        // }, 3000)
+
         setTimeout(() => {
-            const parent = document.querySelector('.hero-cta')
-            const button = document.createElement('A')
-            button.setAttribute('class', 'button button-primary')
-            button.setAttribute('href', "https://kassenov.github.io/testing/2")
-            button.innerText = 'Pre order now'
-            parent.appendChild(button)
-        }, 3000)
+            const button = document.querySelector('div.hero-cta > a.button-primary')
+            const parent = button.parentElement;
+            button.remove()
+
+            setTimeout(() => {
+                parent.appendChild(button)
+            }, 3000)
+
+        }, 2000)
     </script>
 </head>
 
