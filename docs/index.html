@@ -15,6 +15,16 @@
         src="https://client-registry.mutinycdn.com/personalize/client/edc2581ddb9d09bd.js"></script>
     <script src="https://unpkg.com/animejs@3.0.1/lib/anime.min.js"></script>
     <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+    <script>
+        setTimeout(() => {
+            const parent = document.querySelector('.hero-cta')
+            const button = document.createElement('A')
+            button.setAttribute('class', 'button button-primary')
+            button.setAttribute('href', "https://kassenov.github.io/testing/2")
+            button.innerText = 'Pre order now'
+            parent.appendChild(button)
+        }, 3000)
+    </script>
 </head>
 
 <body class="is-boxed has-animations">
@@ -41,9 +51,11 @@
                             <h1 class="hero-title mt-0">Landing template for startups</h1>
                             <p class="hero-paragraph">Our landing page template works on all devices, so you only have
                                 to set it up once, and get beautiful results forever.</p>
-                            <div class="hero-cta"><a class="button button-primary"
-                                    href="https://kassenov.github.io/testing/2">Pre order now</a><a class="button"
-                                    href="#">Get in touch</a></div>
+                            <div class="hero-cta">
+                                <!-- <a class="button button-primary" href="https://kassenov.github.io/testing/2">Pre order
+                                    now</a> -->
+                                <a class="button" href="#">Get in touch</a>
+                            </div>
                         </div>
                         <div class="hero-figure anime-element">
                             <svg class="placeholder" width="528" height="396" viewBox="0 0 528 396">

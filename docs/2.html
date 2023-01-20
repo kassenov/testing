@@ -8,8 +8,25 @@
     <title>Solid Template</title>
     <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,600" rel="stylesheet">
     <link rel="stylesheet" href="dist/css/style.css">
+    <script>
+        (function () { var a = window.mutiny = window.mutiny || {}; if (!window.mutiny.client) { a.client = { _queue: {} }; var b = ["identify", "trackConversion"]; var c = [].concat(b, ["defaultOptOut", "optOut", "optIn"]); var d = function factory(c) { return function () { for (var d = arguments.length, e = new Array(d), f = 0; f < d; f++) { e[f] = arguments[f] } a.client._queue[c] = a.client._queue[c] || []; if (b.includes(c)) { return new Promise(function (b, d) { a.client._queue[c].push({ args: e, resolve: b, reject: d }); setTimeout(d, 500) }) } else { a.client._queue[c].push({ args: e }) } } }; c.forEach(function (b) { a.client[b] = d(b) }) } })();
+    </script>
+    <script data-cfasync="false"
+        src="https://client-registry.mutinycdn.com/personalize/client/edc2581ddb9d09bd.js"></script>
     <script src="https://unpkg.com/animejs@3.0.1/lib/anime.min.js"></script>
     <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+    <script>
+        setTimeout(() => {
+            const button = document.querySelector('div.hero-cta > a.button-primary')
+            const parent = button.parentElement;
+            button.remove()
+
+            setTimeout(() => {
+                parent.appendChild(button)
+            }, 3000)
+
+        }, 2000)
+    </script>
 </head>
 
 <body class="is-boxed has-animations">
@@ -33,11 +50,15 @@
                 <div class="container">
                     <div class="hero-inner">
                         <div class="hero-copy">
-                            <h1 class="hero-title mt-0">11111111Landing template for startups</h1>
+                            <h1 class="hero-title mt-0">************************</h1>
                             <p class="hero-paragraph">Our landing page template works on all devices, so you only have
                                 to set it up once, and get beautiful results forever.</p>
-                            <div class="hero-cta"><a class="button button-primary" href="#">Pre order now</a><a
-                                    class="button" href="#">Get in touch</a></div>
+                            <div class="hero-cta">
+                                <a class="button button-primary test" href="https://kassenov.github.io/">Pre
+                                    order
+                                    now</a>
+                                <a class="button" href="#">Get in touch</a>
+                            </div>
                         </div>
                         <div class="hero-figure anime-element">
                             <svg class="placeholder" width="528" height="396" viewBox="0 0 528 396">
